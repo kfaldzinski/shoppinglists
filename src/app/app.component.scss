@@ -1,0 +1,28 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #8c8c8c;
+}
+
+.wallpaper {
+    background-color: #fcfcfc;
+    height: 150.9mm;
+    width: 100mm;
+    //75.7mm;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    padding: 0;
+    box-sizing: border-box;
+}
