@@ -43,4 +43,5 @@ export class ShoppingListsService {
     this.allShoppingLists.push(wędliny);
 
   }
+
 }
