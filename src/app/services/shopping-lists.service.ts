@@ -42,5 +42,7 @@ export class ShoppingListsService {
     wędliny.products.push(product);
     this.allShoppingLists.push(wędliny);
 
+    ///njkkk
+
   }
 }
