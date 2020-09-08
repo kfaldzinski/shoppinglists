@@ -16,9 +16,11 @@ export class ShoppingListsService {
   }
 
   constructor() {
+    //instancja klasy ShoppingList
     const warzywa = new ShoppingList('warzywa');
     let product = new Product('marchew', 1, 10, 5);
     warzywa.products.push(product);
+    //pole klasy ShoppingList
     product = new Product('ziemniak', 2, 5, 8);
     warzywa.products.push(product);
     product = new Product('fasola', 1, 10, 5);
@@ -33,16 +35,14 @@ export class ShoppingListsService {
     product = new Product('maliny', 8, 6, 7);
     this.allShoppingLists.push(owoce);
 
-    const wędliny = new ShoppingList('wędliny');
+    const wedliny = new ShoppingList('wedliny');
     product = new Product('szynka', 2, 5, 6);
-    wędliny.products.push(product);
+    wedliny.products.push(product);
     product = new Product('kiełbasa', 3, 5, 9);
-    wędliny.products.push(product);
+    wedliny.products.push(product);
     product = new Product('polędwica', 3, 6, 8);
-    wędliny.products.push(product);
-    this.allShoppingLists.push(wędliny);
-
-    ///njkkk
+    wedliny.products.push(product);
+    this.allShoppingLists.push(wedliny);
 
   }
 }
