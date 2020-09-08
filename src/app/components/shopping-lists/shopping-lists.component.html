@@ -15,18 +15,26 @@
   <mat-tab label="Niecodzienne"></mat-tab>
 </mat-tab-group>
 <div *ngIf = "lists.length > 0">
-  <ul>
-    <li *ngFor = "let list of lists">
-      {{list.name}}
-    </li>
-  </ul>
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false" *ngFor = "let list of lists">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{list.name}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        {{list.products<!-- Jak się dostać do tablicy product -->}}
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
   <div>
     <p>
     Dodaj kolejną<br>
     listę zakupów
     </p>
     <button mat-fab a [routerLink]="'/new-shopping-list'" class="example-button-container plus-button">+</button>
-  </div>
+  </div>  
 </div>
 <div *ngIf = "lists.length == 0">
   <p>
