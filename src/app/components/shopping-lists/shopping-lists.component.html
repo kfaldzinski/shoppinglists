@@ -14,11 +14,20 @@
   <mat-tab label="Codzienne"></mat-tab>
   <mat-tab label="Niecodzienne"></mat-tab>
 </mat-tab-group>
-<ul *ngIf = "lists.length > 0">
-  <li *ngFor = "let list of lists">
-    {{list.name}}
-  </li>
-</ul>
+<div *ngIf = "lists.length > 0">
+  <ul>
+    <li *ngFor = "let list of lists">
+      {{list.name}}
+    </li>
+  </ul>
+  <div>
+    <p>
+    Dodaj kolejną<br>
+    listę zakupów
+    </p>
+    <button mat-fab a [routerLink]="'/new-shopping-list'" class="example-button-container plus-button">+</button>
+  </div>
+</div>
 <div *ngIf = "lists.length == 0">
   <p>
   Hej!<br>
