@@ -20,12 +20,14 @@
     (closed)="panelOpenState = false" *ngFor = "let list of lists">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          {{list.name}}
+          {{ list.name }}
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <p>
-        {{list.products<!-- Jak się dostać do tablicy product -->}}
-      </p>
+        <div *ngIf = "products.length > 0">
+          <p *ngFor = "let product of products">
+            {{ product.name }}
+          </p>
+        </div>
     </mat-expansion-panel>
   </mat-accordion>
   <div>

@@ -7,8 +7,7 @@ import { Product } from '../model/product';
 })
 export class ShoppingListsService {
 
-  private allShoppingLists = [
-  ]
+  private allShoppingLists = []
 
   public getAllShoppingLists(){
 
