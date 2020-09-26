@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingListEditComponent implements OnInit {
 
-  constructor() { }
+  list: string = 'np. warzywa';
 
+  list_product: string = 'jakiś produkt';
+
+  constructor() { }
+  
   ngOnInit(): void {
   }
-
 }

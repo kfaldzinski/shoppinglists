@@ -12,11 +12,21 @@
 </mat-toolbar>
 <div>
     <div class="name_shopping_list">
-        <p></p>
+      <p>
+        {{ list }}
+      </p>
+    </div>
+    <div class="button_add_item">
+      <button mat-button a class="example-button-container">Dodaj nową pozycję</button>
     </div>
 </div>
-<div class="example-button-row add-item">
-    <button mat-button a [routerLink]="'/shopping-list-edit'" class="example-button-container">Dodaj nową pozycję</button>
+<div>
+  <ul>
+    <li> {{ list_product }} </li>
+    <li> {{ list_product }} </li>
+    <li> {{ list_product }} </li>
+    <li> {{ list_product }} </li>
+  </ul>
 </div>
 <div class="example-button-row">
     <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container">Anuluj</button>

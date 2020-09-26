@@ -1,18 +1,14 @@
-.example-button-container {
+.mat-fab {
     margin: 0 auto;
     display: block;
-}
-
-.mat-fab {
     background-color: #23b574;
+    font-size: 28px;
+    text-align: center;
 }
 
 p {
     text-align: center;
-}
-
-.plus-button {
-	font-size: 28px;
+    color: #8c8c8c;
 }
 
 .mat-toolbar {
@@ -23,6 +19,15 @@ p {
     flex: 1 1 auto;
 }
 
-.mat-form-field + .mat-form-field {
-    margin-left: 8px;
+.mat-expansion-panel-header-title {
+    color: #8c8c8c;
+}
+
+.example-button-row {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.mat-ripple {
+    display: none;
 }

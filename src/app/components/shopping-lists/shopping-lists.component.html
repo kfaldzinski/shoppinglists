@@ -23,10 +23,16 @@
           {{ list.name }}
         </mat-panel-title>
       </mat-expansion-panel-header>
-        <div *ngIf = "products.length > 0">
-          <p *ngFor = "let product of products">
+        <div *ngIf = "list.products.length > 0">
+          <p *ngFor = "let product of list.products">
             {{ product.name }}
           </p>
+          <p>
+            {{ title }}
+          </p>
+          <div class="example-button-row">
+            <button mat-button color="#8c8c8c">+/-</button>
+          </div>        
         </div>
     </mat-expansion-panel>
   </mat-accordion>
@@ -35,14 +41,10 @@
     Dodaj kolejną<br>
     listę zakupów
     </p>
-    <button mat-fab a [routerLink]="'/new-shopping-list'" class="example-button-container plus-button">+</button>
+    <div class="example-button-container">
+      <button [routerLink]="'/new-shopping-list'" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon>plus_one</mat-icon>
+      </button>
+    </div>  
   </div>  
-</div>
-<div *ngIf = "lists.length == 0">
-  <p>
-  Hej!<br>
-  Sporządź<br>
-  listę zakupów
-  </p>
-  <button mat-fab a [routerLink]="'/new-shopping-list'" class="example-button-container plus-button">+</button>
 </div>

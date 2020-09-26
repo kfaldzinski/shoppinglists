@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ShoppingListsService } from '../../services/shopping-lists.service';
-import { ShoppingList } from '../../model/shopping-list';
 
 @Component({
   selector: 'app-shopping-lists',
@@ -10,7 +9,8 @@ import { ShoppingList } from '../../model/shopping-list';
 
 export class ShoppingListsComponent implements OnInit {
 //instancja klasy ShoppingListsComponent
-  public lists = [];
+  
+  lists = [];
 
   constructor(private shoppingListsService: ShoppingListsService){
   }
@@ -20,14 +20,3 @@ export class ShoppingListsComponent implements OnInit {
     this.lists = this.shoppingListsService.getAllShoppingLists();
   }
 }
-
-export class ShoppingList implements OnInit {
-    public products = [];
-  
-    constructor(private shoppingList: ShoppingList){
-    }
-    
-    ngOnInit(): void {
-      this.products = this.shoppingList.products;
-    }
-  }
