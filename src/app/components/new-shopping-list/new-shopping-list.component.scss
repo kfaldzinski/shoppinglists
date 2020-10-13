@@ -1,5 +1,6 @@
 .mat-toolbar {
     background-color: #4e68b5;
+    height: 80px;
 }
 
 .example-spacer {
@@ -11,7 +12,37 @@
     max-width: 500px;
     width: 100%;
 }
-  
-  .example-full-width {
+
+.mat-form-field {
+    width: 75%;
+    margin-left: 5%;
+    margin-top: 25%;
+}
+
+.example-full-width {
     width: 100%;
+}
+
+.cancel-button {
+    left: 10%;
+}
+
+.create-button {
+    position: absolute;
+    right: 10%;
+}
+
+.example-button-row {
+    width: 100%;
+    position: absolute;
+    bottom: 120px;
+    border-top: 2px solid #f2f2f2;
+}
+
+.mat-tab-header {
+    display: none;
+}
+    
+.mat-tab-group {
+    background-color: #eff2fb;
 }

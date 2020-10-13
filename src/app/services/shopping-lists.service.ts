@@ -7,8 +7,7 @@ import { Product } from '../model/product';
 })
 export class ShoppingListsService {
 
-  private allShoppingLists = [
-  ]
+  private allShoppingLists = []
 
   public getAllShoppingLists(){
 
@@ -16,31 +15,33 @@ export class ShoppingListsService {
   }
 
   constructor() {
-    const warzywa = new ShoppingList('warzywa');
-    let product = new Product('marchew', 1, 10, 5);
+    //instancja klasy ShoppingList
+    const warzywa = new ShoppingList('Warzywa');
+    let product = new Product('Marchew', 1, 10, 5);
     warzywa.products.push(product);
-    product = new Product('ziemniak', 2, 5, 8);
+    //pole klasy ShoppingList
+    product = new Product('Ziemniak', 2, 5, 8);
     warzywa.products.push(product);
-    product = new Product('fasola', 1, 10, 5);
+    product = new Product('Fasola', 1, 10, 5);
     warzywa.products.push(product);
     this.allShoppingLists.push(warzywa);
 
-    const owoce = new ShoppingList('owoce');
-    product = new Product('banany', 1, 2, 6);
+    const owoce = new ShoppingList('Owoce');
+    product = new Product('Banany', 1, 2, 6);
     owoce.products.push(product);
-    product = new Product('jabłka', 1, 3, 6);
+    product = new Product('Jabłka', 1, 3, 6);
     owoce.products.push(product);
-    product = new Product('maliny', 8, 6, 7);
+    product = new Product('Maliny', 8, 6, 7);
     this.allShoppingLists.push(owoce);
 
-    const wędliny = new ShoppingList('wędliny');
-    product = new Product('szynka', 2, 5, 6);
-    wędliny.products.push(product);
-    product = new Product('kiełbasa', 3, 5, 9);
-    wędliny.products.push(product);
-    product = new Product('polędwica', 3, 6, 8);
-    wędliny.products.push(product);
-    this.allShoppingLists.push(wędliny);
+    const wedliny = new ShoppingList('Wedliny');
+    product = new Product('Szynka', 2, 5, 6);
+    wedliny.products.push(product);
+    product = new Product('Kiełbasa', 3, 5, 9);
+    wedliny.products.push(product);
+    product = new Product('Polędwica', 3, 6, 8);
+    wedliny.products.push(product);
+    this.allShoppingLists.push(wedliny);
 
   }
 

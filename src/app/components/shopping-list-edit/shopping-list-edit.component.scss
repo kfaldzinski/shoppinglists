@@ -8,25 +8,61 @@
 }
 
 .name_shopping_list {
-background-color: #23b574;
-width: 100%;
-height: 80px;
-display: flex;
-align-items: center;
-justify-content: center;
+    background-color: #23b574;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.name_shopping_list p {
+.name_shopping_list p, .products-item ul li {
     color: #ffffff;
     margin: 0px auto;
     font-size: 16px;
     text-align: center;
 }
 
-.add-item {
-    text-align: center;
-    margin: 0px;
-    border-bottom: 2px solid #f2f2f2;
-    font-size: 16px;
+.button_add_item {
+    width: 100%;
     height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.example-button-row {
+    width: 100%;
+    position: absolute;
+    bottom: 120px;
+    border-top: 2px solid #f2f2f2;
+
+}
+
+.example-button-container-add {
+    height: 80px;
+    border-bottom: 2px solid #f2f2f2;
+    width: 100%;
+}
+
+.products-item {
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.products-item li {
+    margin: 15px 0 15px 0;
+}
+
+.cancel-button {
+    left: 10%;
+}
+
+.create-button {
+    position: absolute;
+    right: 10%;
+    color: #23b574;
 }
