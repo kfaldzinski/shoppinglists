@@ -1,50 +1,54 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
-<mat-tab-group mat-align-tabs = "center">
-  <mat-tab label="Codzienne"></mat-tab>
-  <mat-tab label="Niecodzienne"></mat-tab>
-</mat-tab-group>
-<div *ngIf = "lists.length > 0">
-  <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true"
-    (closed)="panelOpenState = false" *ngFor = "let list of lists">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{ list.name }}
-        </mat-panel-title>
-      </mat-expansion-panel-header>
+<div *ngIf = "showShoppingList === false">
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-tab-group mat-align-tabs = "center">
+    <mat-tab label="Codzienne"></mat-tab>
+    <mat-tab label="Niecodzienne"></mat-tab>
+  </mat-tab-group>
+  <div *ngIf = "lists.length > 0">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false" *ngFor = "let list of lists">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ list.name }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
         <div *ngIf = "list.products.length > 0">
-          <p *ngFor = "let product of list.products">
+          <div *ngFor = "let product of list.products">
             {{ product.name }}
-          </p>
-          <p>
-            {{ title }}
-          </p>
-          <div class="example-button-row">
-            <button mat-button color="#8c8c8c">+/-</button>
-          </div>        
+          </div>
         </div>
-    </mat-expansion-panel>
-  </mat-accordion>
-  <div>
-    <p>
-    Dodaj kolejną<br>
-    listę zakupów
-    </p>
-    <div class="example-button-container">
+        <div class="example-button-row">
+          <button (click)="showShoppingList = true; listToEdit = list" mat-icon-button class="button_edit">+/-</button>
+        </div>        
+      </mat-expansion-panel>
+    </mat-accordion>
+    <div class="add-list">
+      <!-- <p>
+        Dodaj pierwszą<br>
+        listę zakupów
+      </p> -->
+      <p>
+      Dodaj kolejną<br>
+      listę zakupów
+      </p>
+    </div>
+    <div>
       <button [routerLink]="'/new-shopping-list'" mat-fab color="primary" aria-label="Example icon button with a delete icon">
         <mat-icon>plus_one</mat-icon>
       </button>
     </div>  
-  </div>  
+  </div>
 </div>
+<app-shopping-list-edit [list]="listToEdit" *ngIf = "showShoppingList === true"></app-shopping-list-edit>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingListEditComponent implements OnInit {
 
-  list: string = 'np. warzywa';
-
-  list_product: string = 'jakiś produkt';
+  @Input()
+  public list;
 
   constructor() { }
   

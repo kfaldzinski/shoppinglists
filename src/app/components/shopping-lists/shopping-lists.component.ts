@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ShoppingListsService } from '../../services/shopping-lists.service';
+import { ShoppingList } from 'src/app/model/shopping-list';
 
 @Component({
   selector: 'app-shopping-lists',
@@ -9,8 +10,12 @@ import { ShoppingListsService } from '../../services/shopping-lists.service';
 
 export class ShoppingListsComponent implements OnInit {
 //instancja klasy ShoppingListsComponent
-  
-  lists = [];
+
+  public lists = [];
+  showShoppingList: boolean = false;
+  listToEdit: ShoppingList = null;
+  showFirstList: boolean = false;
+
 
   constructor(private shoppingListsService: ShoppingListsService){
   }

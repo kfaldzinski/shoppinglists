@@ -24,10 +24,31 @@ p {
 }
 
 .example-button-row {
-    text-align: center;
-    margin-top: 15px;
+    vertical-align: bottom;
+
 }
 
 .mat-ripple {
     display: none;
+}
+
+.button_edit {
+    color: #8c8c8c; 
+}
+
+.mat-expansion-panel-header {
+    height: 80px;
+}
+
+.add-list {
+    margin-top: 40px;
+}
+
+.mat-toolbar {
+    background-color: #4e68b5;
+    height: 80px;
+}
+
+.mat-tab-group {
+    background-color: #eff2fb;
 }

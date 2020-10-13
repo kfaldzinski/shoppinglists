@@ -11,24 +11,23 @@
     </button>
 </mat-toolbar>
 <div>
-    <div class="name_shopping_list">
-      <p>
-        {{ list }}
-      </p>
+  <div class="name_shopping_list">
+    <div>
+      {{list.name}}
     </div>
-    <div class="button_add_item">
-      <button mat-button a class="example-button-container">Dodaj nową pozycję</button>
-    </div>
+  </div>
+  <button class="button_add_item" mat-button a class="example-button-container-add">Dodaj nową pozycję</button>
 </div>
 <div>
-  <ul>
-    <li> {{ list_product }} </li>
-    <li> {{ list_product }} </li>
-    <li> {{ list_product }} </li>
-    <li> {{ list_product }} </li>
+  <ul class="products-item" *ngIf = "list.products.length > 0">
+    <li *ngFor = "let product of list.products">
+      {{product.name}}
+    </li>
   </ul>
 </div>
 <div class="example-button-row">
-    <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container">Anuluj</button>
-    <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container">Utwórz</button>
+  <div>
+    <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container cancel-button">Anuluj</button>
+    <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container create-button">Zapisz</button>
+  </div>
 </div>
