@@ -20,5 +20,8 @@
 </mat-form-field>
 <div class="example-button-row">
     <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container cancel-button">Anuluj</button>
-    <button mat-button a [routerLink]="'/shopping-list-edit'" class="example-button-container create-button">Utwórz</button>
+
+    <!--tu zrobic nie przez router, a przez Output analogicznie jak shopping-lists rodzic - shopping-list-edit dziecko  -->
+    <button *ngIf="false" mat-button a [routerLink]="'/shopping-list-edit'" class="example-button-container create-button">Utwórz</button>
 </div>
+<!-- <app-shopping-list-edit [list]=... *ngIf=... (buttonClick)=...></app-shopping-list-edit> -->
