@@ -27,7 +27,9 @@
 </div>
 <div class="example-button-row">
   <div>
-    <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container cancel-button">Anuluj</button>
-    <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container create-button">Zapisz</button>
+    <button (click)="cancel()"  mat-button a class="example-button-container cancel-button">Anuluj</button>
+    <button (click)="save()" mat-button a class="example-button-container create-button">Zapisz</button>
+    <button *ngIf="false" mat-button a [routerLink]="'/shopping-lists'" class="example-button-container cancel-button">Anuluj</button>
+    <button *ngIf="false" mat-button a [routerLink]="'/shopping-lists'" class="example-button-container create-button">Zapisz</button>
   </div>
 </div>
