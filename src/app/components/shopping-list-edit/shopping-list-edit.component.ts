@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -10,22 +10,8 @@ export class ShoppingListEditComponent implements OnInit {
   @Input()
   public list;
 
-  @Output()
-  public buttonClick: EventEmitter<string> = new EventEmitter<string>();
-
   constructor() { }
-
+  
   ngOnInit(): void {
-  }
-
-  public cancel(): void {
-    console.log('Cancel clicked');
-    this.buttonClick.emit('cancel');  // emitujemy informację cancel, którą odbierze rodzic
-  }
-
-  public save(): void {
-    // zapis do backendu
-    console.log('Save clicked');
-    this.buttonClick.emit('save'); // emitujemy informację save, którą odbierze rodzic
   }
 }

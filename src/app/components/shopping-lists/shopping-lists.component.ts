@@ -24,9 +24,4 @@ export class ShoppingListsComponent implements OnInit {
     //pobieram z serwisu listy zakupów
     this.lists = this.shoppingListsService.getAllShoppingLists();
   }
-
-  public shoppingListButton(): void {
-    console.log('Rodzic: Shopping list odebral info o kliknieciu przycisku');
-    this.showShoppingList = false;
-  }
 }

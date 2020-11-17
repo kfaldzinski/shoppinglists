@@ -51,6 +51,4 @@
     </div>  
   </div>
 </div>
-<!-- [list] to jest input komponentu dziecka - shopping-list-edit, przekazujemy go z pola listToEdit, ktrego wartosc zostala 
-ustawiona podczas klikniecia przycisku +/-  -->
-<app-shopping-list-edit [list]="listToEdit" *ngIf="showShoppingList === true" (buttonClick)="shoppingListButton()"></app-shopping-list-edit>
+<app-shopping-list-edit [list]="listToEdit" *ngIf = "showShoppingList === true"></app-shopping-list-edit>
