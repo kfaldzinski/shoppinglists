@@ -12,10 +12,8 @@ export class ShoppingListsComponent implements OnInit {
 //instancja klasy ShoppingListsComponent
 
   public lists = [];
-  showShoppingList: boolean = false;
   listToEdit: ShoppingList = null;
   showFirstList: boolean = false;
-
 
   constructor(private shoppingListsService: ShoppingListsService){
   }
@@ -24,4 +22,6 @@ export class ShoppingListsComponent implements OnInit {
     //pobieram z serwisu listy zakupów
     this.lists = this.shoppingListsService.getAllShoppingLists();
   }
+
+
 }

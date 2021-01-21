@@ -12,11 +12,14 @@
 </mat-toolbar>
 <div>
   <div class="name_shopping_list">
-    <div>
-      {{list.name}}
-    </div>
+    <p>
+      {{nazwaListy}}
+    </p>
   </div>
-  <button class="button_add_item" mat-button a class="example-button-container-add">Dodaj nową pozycję</button>
+  <form *ngIf = "showInput === true" class="example-button-container-add button_add_item">
+      <input type="name">
+  </form>
+  <button *ngIf = "hideButton === false" (click)="showInputSection()" class="button_add_item" mat-button a class="example-button-container-add" >Dodaj nową pozycję</button>
 </div>
 <div>
   <ul class="products-item" *ngIf = "list.products.length > 0">
@@ -27,7 +30,9 @@
 </div>
 <div class="example-button-row">
   <div>
-    <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container cancel-button">Anuluj</button>
-    <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container create-button">Zapisz</button>
+    <button (click)="cancel()" a [routerLink]="'/shopping-lists'" mat-button a class="example-button-container cancel-button">Anuluj</button>
+    <button (click)="save()" mat-button a class="example-button-container create-button">Zapisz</button>
+    <button *ngIf="false" mat-button a [routerLink]="'/new-shopping-list'" class="example-button-container cancel-button">Anuluj</button>
+    <button *ngIf="false" mat-button a [routerLink]="'/shopping-lists'" class="example-button-container create-button">Zapisz</button>
   </div>
 </div>

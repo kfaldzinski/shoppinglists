@@ -14,6 +14,11 @@ export class ShoppingListsService {
     return this.allShoppingLists;
   }
 
+  public addShoppingList(shoppinglist:ShoppingList){
+    this.allShoppingLists.push(shoppinglist);
+  }
+//metoda przyjmuje jako param obiekt klasy ShoppingList
+
   constructor() {
     //instancja klasy ShoppingList
     const warzywa = new ShoppingList('Warzywa');
