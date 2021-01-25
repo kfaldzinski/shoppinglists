@@ -1,10 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-<<<<<<< HEAD
 import { ShoppingList } from 'src/app/model/shopping-list';
 import { ActivatedRoute } from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
-=======
->>>>>>> 19a155604fd181afaa921ef324fc7711e8eb98e2
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -19,7 +16,6 @@ export class ShoppingListEditComponent implements OnInit {
   @Output()
   public buttonClick: EventEmitter<string> = new EventEmitter<string>();
 
-<<<<<<< HEAD
   public nazwaListy: string;
 
   showInput: boolean = false;
@@ -52,21 +48,4 @@ export class ShoppingListEditComponent implements OnInit {
     this.hideButton = true;
   }
 
-=======
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  public cancel(): void {
-    console.log('Cancel clicked');
-    this.buttonClick.emit('cancel');  // emitujemy informację cancel, którą odbierze rodzic
-  }
-
-  public save(): void {
-    // zapis do backendu
-    console.log('Save clicked');
-    this.buttonClick.emit('save'); // emitujemy informację save, którą odbierze rodzic
-  }
->>>>>>> 19a155604fd181afaa921ef324fc7711e8eb98e2
 }

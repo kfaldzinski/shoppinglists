@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div *ngIf = "showShoppingList === false">
   <mat-toolbar color="primary">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
@@ -31,33 +30,3 @@
     <!-- <button *ngIf="false" mat-button class="example-button-container create-button">Zapisz</button> -->
   </div>
 </div>
-<!-- tu zrobic nie przez router, a przez Output analogicznie jak shopping-lists rodzic - shopping-list-edit dziecko  -->
-=======
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
-<mat-tab-group mat-align-tabs = "center">
-  <mat-tab label="Codzienne"></mat-tab>
-  <mat-tab label="Niecodzienne"></mat-tab>
-</mat-tab-group>
-<mat-form-field>
-  <mat-label>Podaj nazwę</mat-label>
-  <input matInput>
-</mat-form-field>
-<div class="example-button-row">
-    <button mat-button a [routerLink]="'/shopping-lists'" class="example-button-container cancel-button">Anuluj</button>
-
-    <!--tu zrobic nie przez router, a przez Output analogicznie jak shopping-lists rodzic - shopping-list-edit dziecko  -->
-    <button *ngIf="false" mat-button a [routerLink]="'/shopping-list-edit'" class="example-button-container create-button">Utwórz</button>
-</div>
-<!-- <app-shopping-list-edit [list]=... *ngIf=... (buttonClick)=...></app-shopping-list-edit> -->
->>>>>>> 19a155604fd181afaa921ef324fc7711e8eb98e2
