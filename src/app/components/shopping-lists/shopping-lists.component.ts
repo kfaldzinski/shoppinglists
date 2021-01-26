@@ -22,13 +22,4 @@ export class ShoppingListsComponent implements OnInit {
     //pobieram z serwisu listy zakupów
     this.lists = this.shoppingListsService.getAllShoppingLists();
   }
-
-<<<<<<< HEAD
-
-=======
-  public shoppingListButton(): void {
-    console.log('Rodzic: Shopping list odebral info o kliknieciu przycisku');
-    this.showShoppingList = false;
-  }
->>>>>>> 19a155604fd181afaa921ef324fc7711e8eb98e2
 }
