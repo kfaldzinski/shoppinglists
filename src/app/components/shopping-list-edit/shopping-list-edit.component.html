@@ -16,10 +16,10 @@
       {{nazwaListy}}
     </p>
   </div>
-  <form *ngIf = "showInput === true" class="example-button-container-add button_add_item">
-      <input type="name">
-  </form>
   <button *ngIf = "hideButton === false" (click)="showInputSection()" class="button_add_item" mat-button a class="example-button-container-add" >Dodaj nową pozycję</button>
+  <form *ngIf = "showInput === true" class="example-button-container-add button_add_item">
+    <input (keydown.enter)="onKeydown($event)">
+</form>
 </div>
 <div>
   <ul class="products-item" *ngIf = "list.products.length > 0">

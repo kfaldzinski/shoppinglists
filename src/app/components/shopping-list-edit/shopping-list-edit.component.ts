@@ -1,6 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ShoppingList } from 'src/app/model/shopping-list';
 import { ActivatedRoute } from '@angular/router';
+import { ShoppingListsService } from 'src/app/services/shopping-lists.service';
+import { Router } from '@angular/router';
+import { Product } from 'src/app/model/product';
 // import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
@@ -23,6 +26,7 @@ export class ShoppingListEditComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     ) {}
 
     public ngOnInit(): void {
@@ -36,11 +40,16 @@ export class ShoppingListEditComponent implements OnInit {
     this.buttonClick.emit('cancel'); //emitujemy informację "cancel", którą odbierze rodzic
   }
 
+  onKeydown(event) {
+  //zapisanie w biącej shoppingList nowego produktu
+    console.log(event);
+  }
+
   public save(): void {
     //zapis do backendu
     console.log('Save clicked');
     this.buttonClick.emit('save'); //emitujemy informację "save", którą odbierze rodzic
-  
+    //zapisanie nowych produktow do biezacej listy
   }
 
   public showInputSection(): void {
