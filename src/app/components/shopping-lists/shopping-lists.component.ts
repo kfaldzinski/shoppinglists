@@ -22,5 +22,4 @@ export class ShoppingListsComponent implements OnInit {
     //pobieram z serwisu listy zakupów
     this.lists = this.shoppingListsService.getAllShoppingLists();
   }
-
 }
