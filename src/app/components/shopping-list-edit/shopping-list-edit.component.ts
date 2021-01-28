@@ -18,6 +18,8 @@ export class ShoppingListEditComponent implements OnInit {
 
   public nazwaListy: string;
 
+  // tutaj dodajesz nowe pole productName
+
   showInput: boolean = false;
   hideButton: boolean = false;
 
