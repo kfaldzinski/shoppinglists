@@ -29,6 +29,12 @@ export class NewShoppingListComponent implements OnInit {
     this.router.navigate(['/shopping-list-edit'], { queryParams: { nazwa: this.model.name } });
   }
 
+  onKeydown(event) {
+    this.shoppingListService.addShoppingList(this.model);
+    this.router.navigate(['/shopping-list-edit'], { queryParams: { nazwa: this.model.name } });
+    console.log(event);
+    }
+
 //   this.lists = this.shoppingListsService.getAllShoppingLists();
 //   <!-- [list] to jest input komponentu dziecka - shopping-list-edit, przekazujemy go z pola listToEdit, ktrego wartosc zostala 
 // ustawiona podczas klikniecia przycisku +/-  -->

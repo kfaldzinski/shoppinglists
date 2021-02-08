@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { ShoppingListsService } from 'src/app/services/shopping-lists.service';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/model/product';
-// import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -27,30 +26,31 @@ export class ShoppingListEditComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    public shoppingListService: ShoppingListsService,
     ) {}
+
 
     public ngOnInit(): void {
       this.route.queryParams.subscribe(params => {
         this.nazwaListy = params['nazwa'];
       });
     }
-  
+
   public cancel(): void {
     console.log('Cancel clicked');
     this.buttonClick.emit('cancel'); //emitujemy informację "cancel", którą odbierze rodzic
   }
 
   onKeydown(event) {
-  //zapisanie w biącej shoppingList nowego produktu
+    // this.router.navigate(['/shopping-list-edit'], { queryParams: { nazwa: this.product.name } });
     console.log(event);
-  }
+    }
 
   public save(): void {
     //zapis do backendu
     console.log('Save clicked');
     this.buttonClick.emit('save'); //emitujemy informację "save", którą odbierze rodzic
-    //zapisanie nowych produktow do biezacej listy
-  }
+    }
 
   public showInputSection(): void {
     this.showInput = true;

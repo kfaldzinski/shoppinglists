@@ -20,7 +20,7 @@
       <mat-label>Podaj nazwę</mat-label>
       <input matInput type="text" class="form-control" id="name"
       required
-      [(ngModel)]="model.name" name="name">
+      [(ngModel)]="model.name" name="name" (keydown.enter)="onKeydown($event)">
     </mat-form-field>
   </form>
   <div class="example-button-row">

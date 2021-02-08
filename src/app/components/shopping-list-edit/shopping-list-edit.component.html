@@ -18,7 +18,9 @@
   </div>
   <button *ngIf = "hideButton === false" (click)="showInputSection()" class="button_add_item" mat-button a class="example-button-container-add" >Dodaj nową pozycję</button>
   <form *ngIf = "showInput === true" class="example-button-container-add button_add_item">
-    <input (keydown.enter)="onKeydown($event)">
+    <input type="text" class="form-control" id="name"
+    required
+    [(ngModel)]="product.name" name="nameD" (keydown.enter)="onKeydown($event)">
 </form>
 </div>
 <div>
@@ -31,8 +33,8 @@
 <div class="example-button-row">
   <div>
     <button (click)="cancel()" a [routerLink]="'/shopping-lists'" mat-button a class="example-button-container cancel-button">Anuluj</button>
-    <button (click)="save()" mat-button a class="example-button-container create-button">Zapisz</button>
-    <button *ngIf="false" mat-button a [routerLink]="'/new-shopping-list'" class="example-button-container cancel-button">Anuluj</button>
+    <button (click)="save()" a [routerLink]="'/shopping-lists'" mat-button a class="example-button-container create-button">Zapisz</button>
+    <button *ngIf="false" mat-button class="example-button-container cancel-button">Anuluj</button>
     <button *ngIf="false" mat-button a [routerLink]="'/shopping-lists'" class="example-button-container create-button">Zapisz</button>
   </div>
 </div>
