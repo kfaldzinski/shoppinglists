@@ -20,7 +20,7 @@
   <form *ngIf = "showInput === true" class="example-button-container-add button_add_item">
     <input type="text" class="form-control" id="name"
     required
-    [(ngModel)]="product.name" name="nameD" (keydown.enter)="onKeydown($event)">
+    [(ngModel)]="productName" name="name" (keydown.enter)="onKeydown($event)">
 </form>
 </div>
 <div>
@@ -28,6 +28,8 @@
     <li *ngFor = "let product of list.products">
       {{product.name}}
     </li>
+    <p> {{productName}}
+    </p>
   </ul>
 </div>
 <div class="example-button-row">

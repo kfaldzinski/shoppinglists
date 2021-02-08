@@ -19,6 +19,7 @@ export class ShoppingListEditComponent implements OnInit {
   public buttonClick: EventEmitter<string> = new EventEmitter<string>();
 
   public nazwaListy: string;
+  public productName: string;
 
   showInput: boolean = false;
   hideButton: boolean = false;
@@ -33,6 +34,7 @@ export class ShoppingListEditComponent implements OnInit {
     public ngOnInit(): void {
       this.route.queryParams.subscribe(params => {
         this.nazwaListy = params['nazwa'];
+        this.productName = params['nazwa'];
       });
     }
 
@@ -42,7 +44,7 @@ export class ShoppingListEditComponent implements OnInit {
   }
 
   onKeydown(event) {
-    // this.router.navigate(['/shopping-list-edit'], { queryParams: { nazwa: this.product.name } });
+    this.router.navigate(['/shopping-list-edit'], { queryParams: { nazwa: this.productName } });
     console.log(event);
     }
 
