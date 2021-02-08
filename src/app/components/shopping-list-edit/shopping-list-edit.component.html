@@ -16,6 +16,17 @@
       {{nazwaListy}}
     </p>
   </div>
+<<<<<<< HEAD
+=======
+  <form *ngIf = "showInput === true" class="example-button-container-add button_add_item">
+    <!-- do tego inputa podpisnasz poprzez ngModel pole productName 
+        oraz reagujesz na zdarzenie nokeydown, na przycisk ENTER
+        gdy to zdarzenie zajdzie, to wtedy z pola productName pobierasz wartosc
+        i tworzysz nowa instancje klasy Product, ktora dopisujesz do listy produktow bieżącej listy
+    -->
+      <input type="name">
+  </form>
+>>>>>>> 18b7f65868091270c3d7ae85d51d1486647398da
   <button *ngIf = "hideButton === false" (click)="showInputSection()" class="button_add_item" mat-button a class="example-button-container-add" >Dodaj nową pozycję</button>
   <form *ngIf = "showInput === true" class="example-button-container-add button_add_item">
     <input type="text" class="form-control" id="name"
